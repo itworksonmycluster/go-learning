@@ -10,7 +10,7 @@ func main() {
 
 	go func(c chan<- string) {
 		for x := 0; x < 10; x++ {
-			ch <- fmt.Sprintf("Inside\n")
+			ch <- fmt.Sprintf("Learning channels\n")
 		}
 		close(c)
 	}(ch)
